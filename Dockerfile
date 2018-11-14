@@ -7,7 +7,7 @@ RUN groupadd -g 1000 osf \
 	&& useradd -ms /bin/bash osf -u 1000 -g osf -G sys,adm,uucp,wheel,tty,log,audio
 
 USER osf
-COPY .xinitrc /home/osf/
+COPY xinitrc /home/osf/.xinitrc
 COPY entrypoint.sh /entrypoint.sh
 COPY sudoer /etc/sudoers.d/osf
 COPY Xwrapper.config /etc/X11/
