@@ -2,5 +2,6 @@
 
 sudo /usr/lib/systemd/systemd-udevd --daemon
 sudo udevadm trigger
+pulseaudio &
 
 startx
