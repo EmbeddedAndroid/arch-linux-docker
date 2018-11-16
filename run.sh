@@ -1,4 +1,5 @@
-#!/bin/sh -e
+#!/bin/sh
+
 docker stop arch
 docker rm arch
 
