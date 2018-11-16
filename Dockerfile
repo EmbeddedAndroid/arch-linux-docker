@@ -7,7 +7,7 @@ RUN pacman --noconfirm -Syu i3-gaps i3-wm i3blocks i3lock i3status terminator dm
 RUN  groupmod -g 1000 users \
 	&& groupmod -g 29 audio \
 	&& groupmod -g 44 video \
-	&& useradd -ms /bin/bash $USERNAME -u 1000 -g users -G sys,adm,uucp,wheel,tty,log,audio,video
+	&& useradd -ms /bin/bash $USERNAME -u 1000 -g users -G sys,adm,uucp,wheel,tty,log,audio,video,docker
 
 USER $USERNAME
 COPY xinitrc /etc/X11/xinit/xinitrc
