@@ -11,6 +11,7 @@ docker run -dit --restart=always --privileged \
 	-v $HOME:/home/$ARCH_USER \
 	-v /run/user/1000/bus:/run/user/1000/bus \
 	-v /dev:/dev \
+	-v /run/dbus/system_bus_socket:/run/dbus/system_bus_socket \
 	-v /var/run/docker.sock:/var/run/docker.sock \
 	-e DBUS_SESSION_BUS_ADDRESS="$DBUS_SESSION_BUS_ADDRESS" \
 	arch:i3
